@@ -14,6 +14,8 @@ str2md5 hashing function, which suggets that the other string is probably in the
 simple strcmp (string compare) function with Str1 and Str2 as its arguments. So, if we can somehow intercept those two arguments being passed in, we can extract the hashed values
 and attempt to decrypt it. 
 
+![Decompiled winmain function in IDA Pro](https://github.com/thebowenfeng/CrackMe_MyDog5_Walkthrough/blob/main/Capture.PNG)
+
 Now normally the program will either provide the decryption function (in which case you just have to copy it and run it), or we have to reverse the function. In this case, we don't
 have a decryption function and reversing a MD5 is way too hard. Luckily, there are plenty MD5 decryptors online. So after we extracted the two hashed values, we easily obtained
 the plaintext value and thus got our answer. 
